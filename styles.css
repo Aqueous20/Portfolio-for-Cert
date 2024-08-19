@@ -2,31 +2,19 @@
   padding: 0;
   margin: 0;
   box-sizing: border-box;
-  font-style: sans-serif;
-}
-
-:root {
-  --main-white: #f0f0f0;
-  --main-red: #be3144;
-  --main-blue: #45567d;
-  --main-gray: #303841;
-}
-
-html {
-  font-size: 58%;
 }
 
 body {
-  font-family: "Poppins", sans-serif;
-  font-size: 1.8rem;
+  font-family: sans-serif;
+  font-size: 32px;
   font-weight: 400;
-  line-height: 1.4;
-  color: var(--main-white);
+  line-height: 1.5;
+  color: #fff;
 }
 
 a {
   text-decoration: none;
-  color: var(--main-white);
+  color: #fff;
 }
 
 ul {
@@ -35,19 +23,18 @@ ul {
 
 #navbar {
   display: flex;
-  justify-content: flex-end;
   position: fixed;
+  justify-content: flex-start;
   top: 0;
   left: 0;
   width: 100%;
-  background: var(--main-red);
-  box-shadow: 0 2px 0 rgba(0, 0, 0, 0.4);
-  z-index: 10;
+  background: purple;
 }
 
 .nav-list {
   display: flex;
   margin-right: 32px;
+  align-items: flex-end;
 }
 
 .nav-list a {
@@ -63,8 +50,7 @@ ul {
   align-items: center;
   width: 100%;
   height: 100vh;
-  background-color: #000;
-  background-image: linear-gradient(62deg, #3a3d40 0%, #181719 100%);
+  background-color: #222222;
 }
 
 h1 {
@@ -75,19 +61,19 @@ h1 {
   font-size: 48px;
   font-weight: 200;
   font-style: italic;
-  color: var(--main-red);
+  color: purple;
 }
 
 #projects {
   text-align: center;
   padding: 160px 32px;
-  background: var(--main-blue);
+  background: #2c6d7b;
 }
 
 .project-header {
   max-width: 640px;
   margin: 0 auto 96px auto;
-  border-bottom: 4px solid var(--main-white);
+  border-bottom: 4px solid #fff;
 }
 
 .project-grid {
@@ -101,13 +87,11 @@ h1 {
 }
 
 .project-tile {
-  background: var(--main-gray);
-  box-shadow: 1px 1px 2px rgba(0, 0, 0, 0.5);
-  border-radius: 2px;
+  background: #222222;
 }
 
 .project-img {
-  height: calc(100% - 108.8px);
+  height: calc(100% - 108px);
   width: 100%;
   object-fit: cover;
 }
@@ -124,9 +108,8 @@ h1 {
   align-items: center;
   text-align: center;
   width: 100%;
-  height: 80vh;
-  padding: 0 2rem;
-  background: var(--main-gray);
+  padding: 0 32px;
+  background: #222222;
 }
 
 .contact-header h2 {
@@ -158,20 +141,29 @@ h1 {
 }
 
 #footer {
-  font-weight: 300;
   display: flex;
   justify-content: space-evenly;
   padding: 32px;
-  background: var(--main-gray);
-  border-top: 4px solid var(--main-red);
+  background: #222222;
+  border-top: 2px solid red;
 }
 
 #footer p {
   margin: 32px;
 }
 
-@media (max-width: 730px) {
+@media (max-width: 780px) {
   #navbar {
     justify-content: center;
+  }
+
+  #welcome-section {
+    text-align: center;
+  }
+}
+
+@media (max-width: 540px) {
+  .contact-links {
+    flex-direction: column;
   }
 }
